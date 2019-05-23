@@ -1,0 +1,97 @@
+body{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: sans-serif;
+    text-transform: uppercase;
+}
+div{
+    position:relative;
+    z-index: 1;
+}
+h1{
+    margin: 0;
+    padding: 0;
+    font-size: 9em;
+    color: #fff;
+    filter: blur(2px);
+}
+ul{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+ul li{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    list-style: none;
+    background: #000;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    filter: blur(5px);
+}
+ul li:nth-child(odd){
+    animation: animateodd 6s linear infinite;
+}
+@keyframes animateodd{
+    0%{
+        transform: translate(0,0) scale(1);
+        opacity: 1;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        transform: translate(300px,-600px) scale(12);
+        opacity: 0;
+    }
+}
+
+ul li:nth-child(even){
+    animation: animateeven 6s linear infinite;
+}
+@keyframes animateeven{
+    0%{
+        transform: translate(0,0) scale(1);
+        opacity: 1;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        transform: translate(-300px,-600px) scale(12);
+        opacity: 0;
+    }
+}
+ul li:nth-child(1){
+    animation-delay: 0s;
+    background:#ffff00; <!--ff0000--> 
+}
+ul li:nth-child(2){
+    animation-delay: 1s;
+        background:#00ff00; <!--0000ff-->
+}
+ul li:nth-child(3){
+    animation-delay: 2s;
+    background:#00ffff; <!--ff00ff-->
+}
+ul li:nth-child(4){
+    animation-delay: 3s;
+    background:#ff00ff; <!--00ffff-->
+}
+ul li:nth-child(5){
+    animation-delay: 4s;
+    background:#0000ff; <!--00ff00-->
+}
+ul li:nth-child(6){
+    animation-delay: 5s;
+    background:#ff0000; <!--ffff00-->
+}
